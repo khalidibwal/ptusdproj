@@ -49,7 +49,7 @@
                             <span class="fa fa-map-marker"></span>
                         </div>
                         <div class="text">
-                            <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+                            <p><span>Address:</span>Sentra Eropa c-42, kota Wisata, Jl. Transyogi Km. 6 Cibubur, Bogor 1696</p>
                         </div>
                     </div>
                     <div class="dbox w-100 d-flex ftco-animate">
@@ -57,7 +57,7 @@
                             <span class="fa fa-phone"></span>
                         </div>
                         <div class="text">
-                            <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+                            <p><span>Phone:</span> <a href="tel://1234567920">+62-21-84935755</a></p>
                         </div>
                     </div>
                     <div class="dbox w-100 d-flex ftco-animate">
@@ -78,9 +78,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-12">
+            <!-- <div class="col-md-12">
                 <div id="map" class="map"></div>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>

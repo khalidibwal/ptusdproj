@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>PT Universal Sinergi Dinamika</title>
+	<title>Universal Sinergi Dinamika</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
@@ -25,8 +25,7 @@
 </head>
     <body>
 		@extends('main.component.js.index')
-		@extends('main.component.master.footer')
-		@extends('main.component.home.team')	
+		@extends('main.component.master.footer')	
 		@extends('main.component.home.vision')	
 		@extends('main.component.home.what')	
 		@extends('main.component.home.who')	

@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\contactController;
+use App\Http\Controllers\pageController;
 use App\Http\Controllers\usd\aquacultureController;
 use App\Http\Controllers\usd\pumpController;
 use App\Http\Controllers\usd\waterController;
@@ -21,12 +23,14 @@ use App\Http\Controllers\usd\waterController;
 //     return view('welcome');
 // });
 
-Route::get('/', 'MainController@index');
 Route::get('/news', 'newsController@index')->name('news.index');
 Route::get('/contactus', 'contactController@index')->name('contact.index');
 Route::get('/project', 'pageController@project')->name('project.index');
 Route::get('/publicnews', 'pageController@news')->name('publicnews.index');
-// Route::get('/publicChat', 'pageController@chating');
+
+Route::get('/publicnews', [pageController::class, 'news'])->name('publicnews.index');
+Route::get('/project', [pageController::class, 'project'])->name('project.index');
+Route::get('/contactus', [contactController::class, 'index'])->name('contact.index');
 Route::get('/', [MainController::class, 'index']);
 //AQUACULTURE
 Route::get('/aguaculture/aire02', [aquacultureController::class, 'aire2index'])->name('aqua.aire2');

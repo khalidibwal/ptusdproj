@@ -17,17 +17,17 @@
                     </p>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
+
 <div class="pt-4 pb-5">
     <div class="container">
         <div class="row d-flex align-items-start align-items-center px-3 px-md-0">
             <div class="col-md-4 d-flex mb-2 mb-md-0">
                 <a class="navbar-brand d-flex flex-column align-items-center" href="index.html">
-                    <img src="{{ asset('frontend/images/USD/USD.png') }}" alt="Crane" style="width: auto; height: 60px;"> <!-- Replace with your image path -->
-                    <span class="ml-2"><small>PT Universal Sinergi Dinamika</small></span>
+                    <img src="{{ asset('frontend/images/USD/USD.png') }}" alt="Crane" style="width: auto; height: 60px;">
+                    <span class="ml-2"><small>Universal Sinergi Dinamika</small></span>
                 </a>
             </div>
             <div class="col-md-4 d-flex topper mb-md-0 mb-2 align-items-center">
@@ -35,7 +35,7 @@
                     <span class="fa fa-map"></span>
                 </div>
                 <div class="pr-md-4 pl-md-3 pl-3 text">
-                    <p class="con"><span>Free Call</span> <span>+1 234 456 78910</span></p>
+                    <p class="con"><span>Call</span> <span>62-21-84935755</span></p>
                     <p class="con">Call Us Now for Customer Support</p>
                 </div>
             </div>
@@ -44,14 +44,13 @@
                     <span class="fa fa-paper-plane"></span>
                 </div>
                 <div class="text pl-3 pl-md-3">
-                    <p class="hr"><span>Our Location</span></p>
-                    <p class="con">Location here...</p>
+                    <p class="hr"><span>Sentra Eropa c-42, kota Wisata, Jl. Transyogi Km. 6 Cibubur, Bogor 16968 </span></p>
+                    <p class="con">Our Location</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 
 {{-- navigation --}}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -60,79 +59,75 @@
             <span class="fa fa-bars"></span> Menu
         </button>
         <div class="collapse navbar-collapse" id="ftco-nav">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mx-auto">
                 <li class="nav-item"><a href="{{url('/')}}" class="nav-link">Home</a></li>
                 <div class="navbar2">
                     <div class="dropdown2">
-                      <button class="dropbtn">Product & Services 
-                        <i class="fa fa-caret-down"></i>
-                      </button>
-                      <div class="dropdown-content">
-                      <li>
-                            <a href="#">Pumps</a>
-                            <ul>
-                                <li><a href="{{route('api.pump')}}">API 610 </a></li>
-                                <li><a href="{{route('fire.pump')}}">Fire Pumps</a></li>
-                                <li><a href="{{route('hori.pump')}}">Horizontal Centrifugal</a></li>
-                                <li><a href="{{route('magnet.pump')}}">Magnetic Drive Seal-Less</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Water & Wastewater</a>
-                            <ul>
-                                <li><a href="{{route('aspirator.water')}}">Aire<sup>02</sup> Argos Batch Reactor</a></li>
-                                <li><a href="{{route('argos.water')}}">Aire<sup>02</sup>Aspirator Aerator</a></li>
-                                <li><a href="{{route('bio.water')}}">Aire<sup>02</sup>BIO FFILM</a></li>
-                                <li><a href="{{route('mixer.water')}}">Aire<sup>02</sup>Mixer</a></li>
-                                <li><a href="{{route('triton.water')}}">Aire<sup>02</sup>Triton Aerator Mixer</a></li>
-                                <li><a href="{{route('halo.water')}}">HALO Aire02 Surface Aerot</a></li>
-                                <li><a href="{{route('micro.water')}}">Microfloat System</a></li>
-                                <li><a href="{{route('trioval.water')}}">Trioval Oxydation Ditch Aeration System</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Aguaculture</a>
-                            <ul>
-                                <li><a href="{{route('aqua.aire2')}}">Aire<sup>02</sup></a></li>
-                                <li><a href="{{route('aqua.autopump')}}">Automatic Priming Pump</a></li>
-                                <li><a href="{{route('d3.diatom')}}">D3 Diatom Enchancer</a></li>
-                                <li><a href="{{route('diff.user')}}">Diffuser</a></li>
-                                <li><a href="{{route('shrimp.shield')}}">ShrimShield & Pondtos</a></li>
-                                <li><a href="{{route('sub.sible')}}">Submersible</a></li>
-                            </ul>
-                        </li>
-                        <a href="#">Heat Exchanger</a>
-                        <!-- <a href="#">Sjrp</a>
-                        <a href="#">Flood Barriers</a>
-                        <a href="#">Energy Conservation</a>
-                        <a href="#">Solar Panel / Street Light System</a> -->
-                      </div>
+                        <button class="dropbtn">Product & Services 
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <li>
+                                <a href="#">Pumps</a>
+                                <ul>
+                                    <li><a href="{{route('api.pump')}}">API 610 </a></li>
+                                    <li><a href="{{route('fire.pump')}}">Fire Pumps</a></li>
+                                    <li><a href="{{route('hori.pump')}}">Horizontal Centrifugal</a></li>
+                                    <li><a href="{{route('magnet.pump')}}">Magnetic Drive Seal-Less</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Water & Wastewater</a>
+                                <ul>
+                                    <li><a href="{{route('aspirator.water')}}">Aire<sup>02</sup> Argos Batch Reactor</a></li>
+                                    <li><a href="{{route('argos.water')}}">Aire<sup>02</sup>Aspirator Aerator</a></li>
+                                    <li><a href="{{route('bio.water')}}">Aire<sup>02</sup>BIO FFILM</a></li>
+                                    <li><a href="{{route('mixer.water')}}">Aire<sup>02</sup>Mixer</a></li>
+                                    <li><a href="{{route('triton.water')}}">Aire<sup>02</sup>Triton Aerator Mixer</a></li>
+                                    <li><a href="{{route('halo.water')}}">HALO Aire02 Surface Aerot</a></li>
+                                    <li><a href="{{route('micro.water')}}">Microfloat System</a></li>
+                                    <li><a href="{{route('trioval.water')}}">Trioval Oxydation Ditch Aeration System</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Aguaculture</a>
+                                <ul>
+                                    <li><a href="{{route('aqua.aire2')}}">Aire<sup>02</sup></a></li>
+                                    <li><a href="{{route('aqua.autopump')}}">Automatic Priming Pump</a></li>
+                                    <li><a href="{{route('d3.diatom')}}">D3 Diatom Enchancer</a></li>
+                                    <li><a href="{{route('diff.user')}}">Diffuser</a></li>
+                                    <li><a href="{{route('shrimp.shield')}}">ShrimShield & Pondtos</a></li>
+                                    <li><a href="{{route('sub.sible')}}">Submersible</a></li>
+                                </ul>
+                            </li>
+                            <a href="#">Heat Exchanger</a>
+                        </div>
                     </div> 
-                  </div>
+                </div>
 
-                  <div class="navbar2">
+                <div class="navbar2">
                     <div class="dropdown2">
-                      <button class="dropbtn">News 
-                        <i class="fa fa-caret-down"></i>
-                      </button>
-                      <div class="dropdown-content">
-                        <a href="{{route('publicnews.index')}}">News</a>
-                        <a href="#">Article</a>
-                      </div>
+                        <button class="dropbtn">News 
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="{{route('publicnews.index')}}">News</a>
+                            <a href="#">Article</a>
+                        </div>
                     </div> 
-                  </div>
+                </div>
                 <li class="nav-item"><a href="{{route('project.index')}}" class="nav-link">Projects</a></li>
                 <div class="navbar2">
                     <div class="dropdown2">
-                      <button class="dropbtn">Transaction 
-                        <i class="fa fa-caret-down"></i>
-                      </button>
-                      <div class="dropdown-content">
-                        <a href="#">Purchase</a>
-                        <a href="#">Rfq</a>
-                      </div>
+                        <button class="dropbtn">Transaction 
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Purchase</a>
+                            <a href="#">Rfq</a>
+                        </div>
                     </div> 
-                  </div>
+                </div>
 
                 <li class="nav-item"><a href="{{route('contact.index')}}" class="nav-link">Contact Us</a></li>
             </ul>
@@ -140,5 +135,45 @@
         
     </div>
 </nav>
+
 {{-- loading --}}
-<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+<div id="ftco-loader" class="show fullscreen">
+    <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/>
+    </svg>
+</div>
+
+
+    <style>
+        /* Reduce padding and margin on navbar */
+        #ftco-navbar {
+            padding: 5px 0; /* Reduced padding */
+        }
+
+        #ftco-navbar .navbar-nav .nav-item {
+            margin: 0 3px; /* Reduced margin */
+        }
+
+        /* Set a smaller maximum width for the navbar */
+        #ftco-navbar .container {
+            max-width: 1000px; /* Adjust as needed */
+        }
+
+        /* Set smaller font size */
+        #ftco-navbar .nav-link {
+            font-size: 12px; /* Reduced font size */
+        }
+
+        /* Responsive for smaller screens */
+        @media (max-width: 768px) {
+            #ftco-navbar {
+                padding: 4px 0; /* Further reduced padding */
+            }
+
+            #ftco-navbar .nav-link {
+                font-size: 11px; /* Further reduced font size */
+            }
+        }
+    </style>
+
