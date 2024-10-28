@@ -25,6 +25,7 @@ use App\Http\Controllers\usd\waterController;
 
 Route::get('/news', 'newsController@index')->name('news.index');
 Route::get('/contactus', 'contactController@index')->name('contact.index');
+Route::post('/contact', [contactController::class, 'send'])->name('contact.send');
 Route::get('/project', 'pageController@project')->name('project.index');
 Route::get('/publicnews', 'pageController@news')->name('publicnews.index');
 

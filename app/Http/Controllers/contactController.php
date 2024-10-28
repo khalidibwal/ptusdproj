@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\odel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class contactController extends Controller
 {
@@ -15,6 +16,30 @@ class contactController extends Controller
     public function index()
     {
         return view('main.component.contact.home');
+    }
+    
+    public function send(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string',
+            'email' => 'required|email',
+            'subject' => 'required|string',
+            'message' => 'required|string',
+        ]);
+
+        // Send email
+        Mail::send('Email.contact', [
+            'name' => $request->name,
+            'email' => $request->email,
+            'subject' => $request->subject,
+            'message' => $request->message,
+        ], function ($mail) use ($request) {
+            $mail->from($request->email, $request->name);
+            $mail->to('khalidblacklist@gmail.com'); // Change this to your real email
+            $mail->subject($request->subject);
+        });
+
+        return back()->with('success', 'Message sent successfully!');
     }
 
     /**
