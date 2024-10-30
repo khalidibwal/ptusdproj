@@ -22,23 +22,32 @@ class ContactMail extends Mailable
     public $name;
     public $email;
     public $subject;
-    public $message;
+    public $contactMessage; // Renamed
 
     public function __construct($data)
     {
         $this->name = $data['name'];
         $this->email = $data['email'];
         $this->subject = $data['subject'];
-        $this->message = $data['message'];
+        $this->contactMessage = $data['message']; // Updated reference
     }
 
     public function build()
-    {
-        return $this->from($this->email, $this->name)
-                    ->to('khalidblacklist@gmail.com') // Change this to your real email
-                    ->subject($this->subject)
-                    ->view('Email.contact');
-    }
+{
+    // Debugging the environment variables
+
+    return $this->from(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'))
+                ->to('khalidblacklist@gmail.com') // Change this to your actual recipient email
+                ->subject($this->subject)
+                ->view('Email.contact')
+                ->with([
+                    'name' => $this->name,
+                    'email' => $this->email,
+                    'subject' => $this->subject,
+                    'message' => $this->contactMessage,
+                ]);
+}
+
 
     /**
      * Get the message envelope.
@@ -60,7 +69,7 @@ class ContactMail extends Mailable
     public function content()
     {
         return new Content(
-            view: 'view.name',
+            view: 'Email.contact',
         );
     }
 

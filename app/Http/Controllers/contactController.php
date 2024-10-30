@@ -5,11 +5,12 @@ namespace App\Http\Controllers;
 use App\odel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactMail;
 
-class contactController extends Controller
+class ContactController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display the contact form.
      *
      * @return \Illuminate\Http\Response
      */
@@ -20,6 +21,7 @@ class contactController extends Controller
     
     public function send(Request $request)
     {
+        // Validate the incoming request
         $request->validate([
             'name' => 'required|string',
             'email' => 'required|email',
@@ -27,19 +29,15 @@ class contactController extends Controller
             'message' => 'required|string',
         ]);
 
-        // Send email
-        Mail::send('Email.contact', [
-            'name' => $request->name,
-            'email' => $request->email,
-            'subject' => $request->subject,
-            'message' => $request->message,
-        ], function ($mail) use ($request) {
-            $mail->from($request->email, $request->name);
-            $mail->to('khalidblacklist@gmail.com'); // Change this to your real email
-            $mail->subject($request->subject);
-        });
+        try {
+            // Send the email
+            Mail::to('khalidblacklist@gmail.com')->send(new ContactMail($request->all()));
 
-        return back()->with('success', 'Message sent successfully!');
+            return back()->with('success', 'Message sent successfully!');
+        } catch (\Exception $e) {
+            // Return an error message
+            return back()->withErrors(['error' => $e->getMessage()]);
+        }
     }
 
     /**
